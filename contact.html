@@ -1,0 +1,57 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact - AutoMax</title>
+  </head>
+  
+
+<body class="contact-page">
+    <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="webshop.html">Webshop</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      
+
+<main>
+   <section class="contact-form-section">
+    <h2>Contacteer ons</h2>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+      <label>Voornaam: <input type="text" name="voornaam" required></label><br>
+      <label>Familienaam: <input type="text" name="familienaam" required></label><br>
+      <label>Adres: <input type="text" name="adres"></label><br>
+      <label>Telefoon: <input type="tel" name="telefoon"></label><br>
+      <label>E-mail: <input type="email" name="email" required></label><br>
+  
+      <label>Reden van contact:
+        <select name="reden">
+          <option value="info">Informatie</option>
+          <option value="aankoop">Aankoop</option>
+          <option value="klacht">Klacht</option>
+        </select>
+      </label><br>
+  
+      <label>Geslacht:<br>
+        <input type="radio" name="geslacht" value="M"> M
+        <input type="radio" name="geslacht" value="V"> V
+        <input type="radio" name="geslacht" value="X"> X
+      </label><br>
+  
+      <label>Uw vraag:<br>
+        <textarea name="vraag" required></textarea>
+      </label><br>
+  
+      <input type="submit" value="Verzenden">
+      <input type="reset" value="Reset">
+    </form>
+   </section>
+  </main>
+  <footer>
+    <p>Dit is een virtuele oefenfirma. Informatie, transacties en goederen op deze website zijn fictief en hebben louter educatieve doeleinden.</p>
+    <p>© Saelen Victor – WFB@Home – Howest</p>
+  </footer>
+  </body>
+  </html>

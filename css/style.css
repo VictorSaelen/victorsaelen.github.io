@@ -1,0 +1,296 @@
+/* Algemene opmaak */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+
+  .index-page .content-left {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .index-page h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .index-page h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  .index-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .index-page table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: #f4f4f4;
+  }
+
+  .index-page table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .contact-form-section {
+    text-align: left;
+  }
+
+  .contact-form-section form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .contact-form-section form div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .contact-form-section form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .contact-form-section form label[for="bericht"] {
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .contact-form-section form input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .contact-form-section form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  .contact-form-section form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    border-radius: 4px;
+  }
+
+  .contact-form-section form button[type="reset"] {
+    background-color: #f44336;
+  }
+
+  .contact-form-section form div input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+  .contact-page main {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex: 1;
+  }
+
+  .contact-page footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+
+  .webshop-page h2 {
+    text-align: center;
+  }
+
+  .product-container > h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8em;
+    width: 100%;
+  }
+  
+  header {
+    background-color: #222;
+    color: white;
+    padding: 1em;
+  }
+
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 1em;
+  }
+
+  /* Voor de titel van de categorieën (SUV's, Hatchbacks, etc.) */
+  .categorie-titel {
+    text-align: center; /* Centreert de tekst */
+    font-weight: bold;  /* Maakt de tekst vet */
+    font-size: 2em;     /* Groter formaat voor titels */
+    margin-top: 2em;    /* Ruimte boven de titel */
+    margin-bottom: 1em; /* Ruimte onder de titel */
+  }
+  
+  
+  /* Navigatie */
+
+.main-nav {
+    background-color: #004999;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+  }
+
+  .main-nav a:hover,
+  .main-nav a.active {
+    background-color: #002f66;
+    border-radius: 4px;
+  }
+
+   main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+  }
+  
+  /* PRODUCTEN FLEXBOX LAYOUT — voldoet aan de opdracht */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    padding: 2em;
+  }
+  
+  /* De breedte van de product artikelen aanpassen zodat ze naast elkaar staan */
+  .product {
+    flex: 1 1 calc(33.33% - 2em); /* 3 per rij op grotere schermen */
+    max-width: calc(33.33% - 2em); /* Zorg ervoor dat de breedte correct is */
+    padding: 1em;
+    box-sizing: border-box; /* Zorg ervoor dat padding en border inbegrepen zijn in de breedte */
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: scale(1.02);
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  /* MEDIA QUERIES VOOR RESPONSIEVE FLEXBOX */
+  @media (max-width: 1024px) {
+    .product {
+      flex: 1 1 calc(50% - 2em); /* 2 per rij op tablets */
+      max-width: calc(50% - 2em); /* Zorg ervoor dat de breedte correct is */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        background-color: #333;
+      }
+  }
+  
+  @media (max-width: 600px) {
+    .product {
+      flex: 1 1 100%; /* 1 per rij op mobiele schermen */
+      max-width: 100%; /* Zorg ervoor dat de breedte 100% is */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        background-color: #333;
+      }
+  }
+  
+  /* Responsieve Navigatie */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 1em;
+      background-color: #333;
+    }
+  
+    nav ul li {
+      padding: 0.5em 0;
+    }
+  }
+  
+  /* Chatknop die altijd zichtbaar is */
+  .chatknop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0055ff;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  
