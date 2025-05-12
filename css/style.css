@@ -1,3 +1,5 @@
+
+
 /* Algemene opmaak */
 body {
     font-family: sans-serif;
@@ -297,8 +299,20 @@ section {
   
   @media (max-width: 600px) {
     .product {
-      flex: 1 1 calc(50% - 2em); /* 1 per rij op mobiele schermen */
-      max-width: calc(50% - 2em); /* Zorgt ervoor dat de breedte 100% is */
+      flex: 1 1 100%; /* 1 per rij op mobiele schermen */
+      max-width: 100%; /* Zorgt ervoor dat de breedte 100% is */
+    }
+
+    .product-container {
+      padding: 1rem;
+    }
+
+    .product-name {
+      font-size: 1.2rem;
+    }
+
+    .product-price {
+      font-size: 1rem;
     }
 
     nav ul {
@@ -311,6 +325,15 @@ section {
   
   /* Responsive Navigatie */
   @media (max-width: 768px) {
+    main > nav ul {
+      flex-direction: column;
+    }
+
+    main > nav a {
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+    }
+
     nav ul {
       flex-direction: column;
       align-items: center;
@@ -336,10 +359,71 @@ section {
   }
 }
 
+/* Categorie navigatie - Specifiek voor de class "categorie-nav" */
+.categorie-nav {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f0f0f0;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.categorie-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; 
+  flex-wrap: wrap; 
+}
+
+.categorie-nav li {
+  display: inline-block;
+}
+
+.categorie-nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  display: block; 
+  min-width: 80px; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  line-height: 1.5;
+}
+
+.categorie-nav a:hover {
+  background-color: #ddd;
+}
+
+/* Verklein de tekst voor kleinere schermen */
+@media (max-width: 768px) {
+  .categorie-nav ul {
+    flex-direction: column; 
+    padding: 0;
+  }
+
+  .categorie-nav a {
+    font-size: 1rem;  
+    padding: 0.8rem 1rem;
+    min-width: auto;
+    line-height: 1.6;  
+  }
+}
+
 
   /* Stijl voor de categorie-navigatie bovenaan */
 main > nav {
-  background-color: #f0f0f0;
+  background-color: white;
   padding: 1rem 0;
   margin-bottom: 2rem;
   text-align: center;
