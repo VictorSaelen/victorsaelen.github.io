@@ -6,6 +6,7 @@ body {
     background-color: #f7f7f7;
   }
 
+  /*index-page */
   .index-page .content-left {
     max-width: 1000px;
     margin: 0 auto;
@@ -44,6 +45,7 @@ body {
     text-align: left;
   }
 
+  /* contact-page */
   .contact-page {
     display: flex;
     flex-direction: column;
@@ -119,6 +121,13 @@ body {
     margin-left: 0;
   }
 
+  section.product-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4em 2em;
+  }
+
   .contact-page main {
     text-align: left;
     width: 100%;
@@ -157,15 +166,44 @@ body {
   }
 
   /* Voor de titel van de categorieën (SUV's, Hatchbacks, etc.) */
-  .categorie-titel {
-    text-align: center; /* Centreert de tekst */
-    font-weight: bold;  /* Maakt de tekst vet */
-    font-size: 2em;     /* Groter formaat voor titels */
-    margin-top: 2em;    /* Ruimte boven de titel */
-    margin-bottom: 1em; /* Ruimte onder de titel */
-  }
-  
-  
+.categorie-titel {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+section {
+  text-align: center;
+}
+
+  .categorie-blok {
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  color: black; /* indien nodig voor contrast */
+}
+
+.suv-blok {
+  background-image: url("../images/jungle.jpg");
+}
+
+.hatchback-blok {
+  background-image: url("../images/citystreet.jpg");
+}
+
+.electric-blok {
+  background-image: url("../images/futuristic_city.jpg");
+}
+
+.sedan-blok {
+  background-image: url("../images/luxury_garage.jpg");
+}
+
   /* Navigatie */
 
 .main-nav {
@@ -206,23 +244,27 @@ body {
     padding: 2em;
   }
   
-  /* PRODUCTEN FLEXBOX LAYOUT — voldoet aan de opdracht */
+  /* PRODUCTEN FLEXBOX LAYOUT */
   .product-container {
     display: flex;
     flex-wrap: wrap;
+    padding: 2em;
     gap: 2em;
     justify-content: center;
-    padding: 2em;
+    z-index: 1;
+    position: relative;
   }
   
-  /* De breedte van de product artikelen aanpassen zodat ze naast elkaar staan */
   .product {
     flex: 1 1 calc(33.33% - 2em); /* 3 per rij op grotere schermen */
-    max-width: calc(33.33% - 2em); /* Zorg ervoor dat de breedte correct is */
+    max-width: calc(33.33% - 2em); /* Zorgt ervoor dat de breedte correct is */
     padding: 1em;
-    box-sizing: border-box; /* Zorg ervoor dat padding en border inbegrepen zijn in de breedte */
+    box-sizing: border-box; /* Zorgt ervoor dat padding en border inbegrepen zijn in de breedte */
     border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
   }
   
   .product:hover {
@@ -235,12 +277,14 @@ body {
     border-radius: 6px;
     object-fit: cover;
   }
+
+
   
-  /* MEDIA QUERIES VOOR RESPONSIEVE FLEXBOX */
+  /* MEDIA QUERIES VOOR RESPONSIVE FLEXBOX */
   @media (max-width: 1024px) {
     .product {
       flex: 1 1 calc(50% - 2em); /* 2 per rij op tablets */
-      max-width: calc(50% - 2em); /* Zorg ervoor dat de breedte correct is */
+      max-width: calc(50% - 2em); /* Zorgt ervoor dat de breedte correct is */
     }
 
     nav ul {
@@ -253,8 +297,8 @@ body {
   
   @media (max-width: 600px) {
     .product {
-      flex: 1 1 100%; /* 1 per rij op mobiele schermen */
-      max-width: 100%; /* Zorg ervoor dat de breedte 100% is */
+      flex: 1 1 calc(50% - 2em); /* 1 per rij op mobiele schermen */
+      max-width: calc(50% - 2em); /* Zorgt ervoor dat de breedte 100% is */
     }
 
     nav ul {
@@ -265,7 +309,7 @@ body {
       }
   }
   
-  /* Responsieve Navigatie */
+  /* Responsive Navigatie */
   @media (max-width: 768px) {
     nav ul {
       flex-direction: column;
@@ -278,6 +322,54 @@ body {
       padding: 0.5em 0;
     }
   }
+
+  body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+  /* Stijl voor de categorie-navigatie bovenaan */
+main > nav {
+  background-color: #f0f0f0;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+main > nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main > nav li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+main > nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+main > nav a:hover {
+  background-color: #ddd;
+}
+
   
   /* Chatknop die altijd zichtbaar is */
   .chatknop {
@@ -292,5 +384,25 @@ body {
     cursor: pointer;
     z-index: 10;
   }
+
+  .chatknop {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
   
   
